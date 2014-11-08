@@ -1,10 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{title}}{% endblock %}
 {% block stylesheet_content %}
-<!--[if IE]>
-	<link href="{{url_for('static', filename='css/ie.css')}}" media="screen, projection" rel="stylesheet" type="text/css" />
-<![endif]-->
-<link href="{{url_for('static', filename='css/main.css')}}" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="{{url_for('static', filename='css/app.css')}}" media="screen, projection" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block script_content %}{% endblock %}
