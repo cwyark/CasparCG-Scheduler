@@ -7,21 +7,94 @@
 {% block script_content %}{% endblock %}
 
 {% block body_content %}
-<header class="header_wrapper">
-	<div class="menu">
-		<ul>
-			<li class="item">DashBoard</li>
-			<li class="item">TestClient</li>
-			<li class="item">Settings</li>
+<nav class="top-bar" data-topbar role="navigation">
+	<ul class="title-area">
+		<li class="name">
+			<h1><a href="/">CasparCG Web Client</a></h1>
+		</li>
+		<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	</ul>
+
+	<section class="top-bar-section">
+		<!-- Right Nav Section -->
+		<ul class="right">
+			<li class="has-dropdown">
+				<a href="#">Settings</a>
+				 <ul class="dropdown">
+					<li><a href="#">First link in dropdown</a></li>
+					<li><a href="#">Active link in dropdown</a></li>
+				 </ul>
+			</li>
+	    </ul>
+		<!-- Left Nav Section -->
+		<ul class="left">
+			<li class="active"><a href="/">Dashboard</a></li>
+			<li ><a href="/testclient">Test client</a></li>
 		</ul>
-	</div>
-</header>
+	</section>
+</nav>
 <section class="section_wrapper">
-	<div class="item_list">This is item list (video's list in casparCG server media path)</div>
-	<div class="onboard_list">This is the list of wait to be playouted</div>
+	<div class="row">
+		<div class="small-3 columns">
+			<dl class="tabs" data-tab>
+				<dd class="active"><a href="#panel1">Database</a></dd>
+				<dd><a href="#panel2">Media Lists</a></dd>
+			</dl>
+			<div class="tabs-content">
+				<div class="content active" id="panel1">
+					<p>This is the first panel of the basic tab example. This is the first panel of the basic tab example.</p>
+				 </div>
+				 <div class="content" id="panel2">
+					<p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+				 </div>
+			</div>
+		</div>
+		<div class="small-9 columns">
+			<table>
+				<thead>
+					<tr>
+						<th width="200">Table Header</th>
+						<th>Table Header</th>
+						<th width="150">Table Header</th>
+						<th width="150">Table Header</th>					
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Content Goes Here</td>
+						<td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+						<td>Content Goes Here</td>
+						<td>Content Goes Here</td>
+					</tr>
+					<tr>
+						<td>Content Goes Here</td>
+						<td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+						<td>Content Goes Here</td>
+						<td>Content Goes Here</td>
+					</tr>
+					<tr>
+						<td>Content Goes Here</td>
+						<td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+						<td>Content Goes Here</td>
+						<td>Content Goes Here</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </section>
-<footer class="footer_wrapper">
-	<div class="footer"></div>
+<footer>
+	<p>Designed by Cwyark (<a href="https://github.com/cwyark">Github</a>||<a href="https://twitter.com/cwyark">Twitter</a>||<a href="http://cwyark.tumblr.com/">Timblr</a>) || All rights reserved</p>
 </footer>
 {% endblock %}
 
+
+{% block end_script_content %}
+<script src="{{url_for('static', filename='bower_components/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='bower_components/foundation/js/foundation.min.js')}}"></script>
+<script src="{{url_for('static', filename='bower_components/foundation/js/foundation/foundation.offcanvas.js')}}"></script>
+<script>
+    $(document).foundation();
+</script>
+{% endblock %}
