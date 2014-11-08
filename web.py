@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import os
 
 
 port = 8000
@@ -9,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def __index():
-    return render_template('index.html')
+    return render_template('index.html', title='CasparCG Dashboard')
 
 
 def run_server():
