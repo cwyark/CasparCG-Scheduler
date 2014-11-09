@@ -159,7 +159,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 85.375rem;
+  max-width: 62.5rem;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
 .row:before, .row:after {
@@ -5717,7 +5717,7 @@ ul.pagination li {
   /* line 167, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal, dialog {
     width: 80%;
-    max-width: 85.375rem;
+    max-width: 62.5rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -5745,7 +5745,7 @@ ul.pagination li {
   /* line 182, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.tiny, dialog.tiny {
     width: 30%;
-    max-width: 85.375rem;
+    max-width: 62.5rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -5755,7 +5755,7 @@ ul.pagination li {
   /* line 183, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.small, dialog.small {
     width: 40%;
-    max-width: 85.375rem;
+    max-width: 62.5rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -5765,7 +5765,7 @@ ul.pagination li {
   /* line 184, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.medium, dialog.medium {
     width: 60%;
-    max-width: 85.375rem;
+    max-width: 62.5rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -5775,7 +5775,7 @@ ul.pagination li {
   /* line 185, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.large, dialog.large {
     width: 70%;
-    max-width: 85.375rem;
+    max-width: 62.5rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -5785,7 +5785,7 @@ ul.pagination li {
   /* line 186, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.xlarge, dialog.xlarge {
     width: 95%;
-    max-width: 85.375rem;
+    max-width: 62.5rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -5805,7 +5805,7 @@ ul.pagination li {
   /* line 187, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.full, dialog.full {
     width: 100vw;
-    max-width: 85.375rem;
+    max-width: 62.5rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -6657,7 +6657,7 @@ meta.foundation-mq-topbar {
 /* line 195, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar .name h1 {
   line-height: 45px;
-  font-size: 1.5625rem;
+  font-size: 1.0625rem;
   margin: 0;
 }
 /* line 199, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -6738,7 +6738,7 @@ meta.foundation-mq-topbar {
   left: 0;
   position: relative;
   width: auto;
-  transition: left 200ms ease-out;
+  transition: left 300ms ease-out;
 }
 /* line 288, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul {
@@ -6769,13 +6769,13 @@ meta.foundation-mq-topbar {
   padding: 12px 0 12px 0;
   padding-left: 15px;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.8125rem;
   font-weight: normal;
   text-transform: none;
 }
 /* line 319, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
-  font-size: 1.125rem;
+  font-size: 0.8125rem;
   padding-right: 15px;
   padding-left: 15px;
   background-color: #008cba;
@@ -6848,7 +6848,7 @@ meta.foundation-mq-topbar {
 }
 /* line 331, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > button {
-  font-size: 1.125rem;
+  font-size: 0.8125rem;
   padding-right: 15px;
   padding-left: 15px;
   background-color: #008cba;
@@ -7085,7 +7085,7 @@ meta.foundation-mq-topbar {
 
   /* line 469, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .contain-to-grid .top-bar {
-    max-width: 85.375rem;
+    max-width: 62.5rem;
     margin: 0 auto;
     margin-bottom: 0;
   }
