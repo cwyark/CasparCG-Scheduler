@@ -1,10 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 
 Base = declarative_base()
-
 
 class OnTheAir(Base):
     __tablename__ = 'OnTheAir_list'
@@ -31,4 +31,8 @@ class PlayHistory(Base):
         self.name = name
         self.playtime = playtime
 
+engine = create_engine('sqlite:///database.sqlite', echo=True)
+Base.metadata.create_all(engine)
+Session = sessionmaker(bind=engine)
+session = Session()
 
