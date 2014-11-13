@@ -1,39 +1,9 @@
 {% extends "base.html" %}
 {% block title %}{{title}}{% endblock %}
-{% block stylesheet_content %}
-<link href="{{url_for('static', filename='css/app.css')}}" media="screen, projection" rel="stylesheet" type="text/css" />
-{% endblock %}
-
+{% block stylesheet_content %}{% endblock %}
 {% block script_content %}{% endblock %}
 
 {% block body_content %}
-<nav class="top-bar" data-topbar role="navigation">
-	<ul class="title-area">
-		<li class="name">
-			<h1><a href="/">CasparCG Web Client</a></h1>
-		</li>
-		<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-		<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	</ul>
-
-	<section class="top-bar-section">
-		<!-- Right Nav Section -->
-		<ul class="right">
-			<li class="has-dropdown">
-				<a href="#">Settings</a>
-				 <ul class="dropdown">
-					<li><a href="#">First link in dropdown</a></li>
-					<li><a href="#">Active link in dropdown</a></li>
-				 </ul>
-			</li>
-	    </ul>
-		<!-- Left Nav Section -->
-		<ul class="left">
-			<li class="active"><a href="/">Dashboard</a></li>
-			<li ><a href="/testclient">Test client</a></li>
-		</ul>
-	</section>
-</nav>
 <section class="section_wrapper">
 	<div class="row">
 		<div class="small-3 columns">
@@ -126,17 +96,7 @@
 		</div>
 	</div>
 </section>
-<footer>
-	<p>Designed by Cwyark (<a href="https://github.com/cwyark">Github</a>||<a href="https://twitter.com/cwyark">Twitter</a>||<a href="http://cwyark.tumblr.com/">Tumblr</a>) || All rights reserved</p>
-</footer>
 {% endblock %}
 
 
-{% block end_script_content %}
-<script src="{{url_for('static', filename='bower_components/jquery/dist/jquery.min.js')}}"></script>
-<script src="{{url_for('static', filename='bower_components/foundation/js/foundation.min.js')}}"></script>
-<script src="{{url_for('static', filename='bower_components/foundation/js/foundation/foundation.offcanvas.js')}}"></script>
-<script>
-    $(document).foundation();
-</script>
-{% endblock %}
+{% block end_script_content %}{% endblock %}

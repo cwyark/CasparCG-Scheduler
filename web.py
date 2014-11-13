@@ -12,6 +12,11 @@ def __index():
     return render_template('index.html', title='CasparCG Dashboard')
 
 
+@app.route('/testclient')
+def __testclient():
+    return render_template('testclient.html', title='CasparCG Dashboard')
+
+
 @app.route('/ontheair/<name>/<timestamp>/<tag>', methods=['GET', 'POST', 'PATCH', 'PUT', 'DELETE'])
 def __OTA_handler(name, timestamp, tag):
     if request.method in ['POST', 'PATCH']:
