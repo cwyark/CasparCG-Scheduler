@@ -14,8 +14,10 @@ def __index():
 
 @app.route('/ontheair/<name>/<timestamp>/<tag>', methods=['GET', 'POST', 'PATCH', 'PUT', 'DELETE'])
 def __OTA_handler(name, timestamp, tag):
-    if request.method in ['GET', 'POST', 'PATCH']:
-        return "method %sis not allowed" % request.method
+    if request.method in ['POST', 'PATCH']:
+        return "method %s is not allowed" % request.method
+    elif request.method == 'GET':
+        return "Get the data"
     elif request.method == 'PUT':
         return "PUT the data"
     elif request.method == 'DELETE':
