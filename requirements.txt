@@ -4,6 +4,8 @@ MarkupSafe==0.23
 SQLAlchemy==0.9.8
 Twisted==14.0.2
 Werkzeug==0.9.6
+argparse==1.2.1
+fake-factory==0.4.2
 itsdangerous==0.24
 wsgiref==0.1.2
 zope.interface==4.1.1
