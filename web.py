@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+import models
 
 port = 8000
 host = '127.0.0.1'
@@ -17,14 +17,12 @@ def __testclient():
     return render_template('testclient.html', title='CasparCG Dashboard')
 
 
-@app.route('/ontheair/<name>/<timestamp>/<tag>', methods=['GET', 'POST', 'PATCH', 'PUT', 'DELETE'])
-def __OTA_handler(name, timestamp, tag):
-    if request.method in ['POST', 'PATCH']:
-        return "method %s is not allowed" % request.method
-    elif request.method == 'GET':
+@app.route('/insert/<name>/<timestamp>', methods=['GET', 'POST', 'DELETE'])
+def __OTA_handler(name, timestamp):
+    if request.method == 'GET':
         return "Get the data"
-    elif request.method == 'PUT':
-        return "PUT the data"
+    elif request.method == 'POST':
+        return "PUT the da"
     elif request.method == 'DELETE':
         return "DELETE  the data"
 
