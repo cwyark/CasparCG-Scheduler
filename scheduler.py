@@ -1,8 +1,11 @@
 import web
 import settings
+import models
+import sys
 from twisted.web.wsgi import WSGIResource
 from twisted.web.server import Site
 from twisted.internet import reactor, protocol
+from twisted.python import log
 
 
 class AMCPProtocol(protocol.Protocol):
@@ -31,6 +34,8 @@ site = Site(resource)
 
 
 if __name__ == "__main__":
+    log.startLogging(sys.stdout)
+    models.database_init()
     reactor.listenTCP(settings.__WEBCLIENT_PORT__, site)
     reactor.connectTCP(settings.__CASPARCG_SERVER_IP__, settings.__CASPARCG_SERVER_PORT__, AMCPFactory())
     reactor.run()
