@@ -7,7 +7,9 @@ from twisted.internet import reactor, protocol
 
 class AMCPProtocol(protocol.Protocol):
     def connectionMade(self):
+        print "connect with server %s build" % self.transport.getPeer()
         self.transport.write("INFO\r\n")
+
     def dataReceived(self, data):
         print "CasparCG Server: %s" % data
 
@@ -28,6 +30,7 @@ resource = WSGIResource(reactor, reactor.getThreadPool(), web.app)
 site = Site(resource)
 
 
-reactor.listenTCP(settings.__WEBCLIENT_PORT__, site)
-reactor.connectTCP(settings.__CASPARCG_SERVER_IP__, settings.__CASPARCG_SERVER_PORT__, AMCPFactory())
-reactor.run()
+if __name__ == "__main__":
+    reactor.listenTCP(settings.__WEBCLIENT_PORT__, site)
+    reactor.connectTCP(settings.__CASPARCG_SERVER_IP__, settings.__CASPARCG_SERVER_PORT__, AMCPFactory())
+    reactor.run()
