@@ -1,10 +1,8 @@
 from flask import Flask, render_template, request
 import models
+import settings
 
 
-port = 8000
-host = '127.0.0.1'
-debug = True
 app = Flask(__name__)
 
 
@@ -31,7 +29,7 @@ def __OTA_handler(name, timestamp, tag):
 
 
 def run_server():
-    app.run(port=port, host=host, debug=debug)
+    app.run(port=settings.__WEBCLIENT_PORT__, host=settings.__WEBCLIENT_IP__, debug=settings.__WEBCLIENT_DEBUG__)
 
 
 if __name__ == '__main__':
